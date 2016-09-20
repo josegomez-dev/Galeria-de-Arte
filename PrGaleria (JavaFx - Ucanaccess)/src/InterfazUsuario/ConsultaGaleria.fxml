@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InterfazUsuario.ConsultaGaleria">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fefefe" height="402.0" stroke="#fefefe" strokeType="INSIDE" width="757.0" />
+      <ImageView fitHeight="240.0" fitWidth="462.0" layoutX="310.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagenes/consulta.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="15.0" layoutY="14.0" prefHeight="38.0" prefWidth="296.0" text="Información de la galería">
+         <font>
+            <Font name="Eras Medium ITC" size="25.0" />
+         </font>
+      </Label>
+      <Line endX="230.0" layoutX="115.0" layoutY="51.0" startX="-100.0" stroke="#5f0b00" />
+      <Label fx:id="lCedulaJuridica" layoutX="180.0" layoutY="61.0" prefHeight="24.0" prefWidth="126.0">
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label layoutX="108.0" layoutY="100.0" text="Nombre:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="64.0" text="Cédula jurídica:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="354.0" text="Metros cuadrados:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="302.0" text="Encargado:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="267.0" text="Fecha inaugurada:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="104.0" layoutY="231.0" text="Teléfono:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="99.0" layoutY="146.0" text="Dirección:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lDireccion" alignment="TOP_LEFT" layoutX="180.0" layoutY="145.0" prefHeight="70.0" prefWidth="126.0" wrapText="true">
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label fx:id="lTelefono" layoutX="180.0" layoutY="228.0" prefHeight="24.0" prefWidth="126.0">
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label fx:id="lFechaInaugurada" layoutX="180.0" layoutY="264.0" prefHeight="24.0" prefWidth="126.0">
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label fx:id="lEncargado" alignment="TOP_LEFT" layoutX="180.0" layoutY="301.0" prefHeight="38.0" prefWidth="126.0" wrapText="true">
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label fx:id="lMetrosCuadrados" layoutX="180.0" layoutY="351.0" prefHeight="24.0" prefWidth="126.0">
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Line endX="250.0" layoutX="490.0" layoutY="51.0" startX="-100.0" stroke="#5f0b00" />
+      <Label layoutX="390.0" layoutY="14.0" prefHeight="38.0" prefWidth="296.0" text="Pinturas adquiridas">
+         <font>
+            <Font name="Eras Medium ITC" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tablaPinturasAdquiridas" layoutX="390.0" layoutY="62.0" opacity="0.75" prefHeight="289.0" prefWidth="351.0">
+         <columns>
+            <TableColumn fx:id="cNumero" prefWidth="35.0" text="No." />
+            <TableColumn fx:id="cNombre" prefWidth="248.0" text="Nombre" />
+            <TableColumn fx:id="cExposicion" prefWidth="67.0" text="Exposición" />
+         </columns>
+      </TableView>
+      <Label fx:id="lNombre" alignment="TOP_LEFT" layoutX="180.0" layoutY="97.0" prefHeight="38.0" prefWidth="126.0" wrapText="true">
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Button fx:id="btnConsultarPintura" disable="true" layoutX="633.0" layoutY="359.0" mnemonicParsing="false" onAction="#consultar" prefHeight="32.0" prefWidth="106.0" text="Consultar">
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Iconos/consultar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

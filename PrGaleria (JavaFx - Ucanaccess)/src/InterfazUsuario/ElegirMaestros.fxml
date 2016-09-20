@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InterfazUsuario.ElegirMaestros">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fefefe" height="462.0" stroke="#fefefe" strokeType="INSIDE" width="757.0" />
+      <ImageView fitHeight="240.0" fitWidth="462.0" layoutX="310.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagenes/consulta.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnElegir" layoutX="671.0" layoutY="407.0" mnemonicParsing="false" onAction="#elegir" opacity="0.85" prefHeight="32.0" prefWidth="72.0" text="Elegir">
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnBuscar" layoutX="616.0" layoutY="60.0" mnemonicParsing="false" onAction="#buscar" prefHeight="27.0" prefWidth="61.0" text="Buscar">
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+      </Button>
+      <TextField fx:id="iNombre" layoutX="390.0" layoutY="62.0" prefHeight="25.0" prefWidth="221.0" promptText="Nombre" />
+      <Line endX="252.0" layoutX="491.0" layoutY="51.0" startX="-100.0" stroke="#5b0808" />
+      <TableView fx:id="tablaPintores" layoutX="391.0" layoutY="96.0" opacity="0.75" prefHeight="304.0" prefWidth="353.0">
+         <columns>
+            <TableColumn fx:id="cCedula2" prefWidth="66.0" text="Cédula" />
+            <TableColumn fx:id="cNombre2" prefWidth="286.0" text="Nombre completo" />
+         </columns>
+      </TableView>
+      <Label layoutX="390.0" layoutY="13.0" prefHeight="38.0" prefWidth="188.0" text="Lista de pintores">
+         <font>
+            <Font name="Eras Medium ITC" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tablaMaestros" layoutX="14.0" layoutY="59.0" opacity="0.75" prefHeight="341.0" prefWidth="353.0">
+         <columns>
+            <TableColumn fx:id="cCedula" prefWidth="64.0" text="Cédula" />
+            <TableColumn fx:id="cNombre" prefWidth="288.0" text="Nombre completo" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnQuitar" layoutX="295.0" layoutY="407.0" mnemonicParsing="false" onAction="#quitar" opacity="0.85" prefHeight="32.0" prefWidth="72.0" text="Quitar">
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="13.0" layoutY="14.0" prefHeight="38.0" prefWidth="243.0" text="Elección de maestros">
+         <font>
+            <Font name="Eras Medium ITC" size="25.0" />
+         </font>
+      </Label>
+      <Line endX="252.0" layoutX="114.0" layoutY="52.0" startX="-100.0" stroke="#5b0808" />
+      <Button fx:id="btnListar" layoutX="315.0" layoutY="19.0" mnemonicParsing="false" onAction="#listar" prefHeight="28.0" prefWidth="52.0" text="Listar">
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

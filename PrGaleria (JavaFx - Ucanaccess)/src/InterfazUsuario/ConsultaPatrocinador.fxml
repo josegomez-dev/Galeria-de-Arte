@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="399.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InterfazUsuario.ConsultaPatrocinador">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fefefe" height="399.0" stroke="#fefefe" strokeType="INSIDE" width="757.0" />
+      <Label layoutX="15.0" layoutY="14.0" prefHeight="38.0" prefWidth="331.0" text="Información del patrocinador">
+         <font>
+            <Font name="Eras Medium ITC" size="25.0" />
+         </font>
+      </Label>
+      <Line endX="230.0" layoutX="115.0" layoutY="51.0" startX="-100.0" stroke="#5f0b00" />
+      <Label fx:id="lCedula" layoutX="180.0" layoutY="62.0" prefHeight="24.0" prefWidth="157.0">
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <ImageView fitHeight="240.0" fitWidth="462.0" layoutX="310.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagenes/consulta.jpg" />
+         </image>
+      </ImageView>
+      <Line endX="250.0" layoutX="490.0" layoutY="51.0" startX="-100.0" stroke="#5f0b00" />
+      <Label layoutX="390.0" layoutY="14.0" prefHeight="38.0" prefWidth="236.0" text="Pintores financiados">
+         <font>
+            <Font name="Eras Medium ITC" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tablaPintoresFinanciados" layoutX="390.0" layoutY="62.0" opacity="0.75" prefHeight="311.0" prefWidth="351.0">
+         <columns>
+            <TableColumn fx:id="cNombre" prefWidth="350.0" text="Nombre completo" />
+         </columns>
+      </TableView>
+      <Label layoutX="180.0" layoutY="200.0" prefHeight="24.0" prefWidth="157.0">
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label layoutX="25.0" layoutY="277.0" text="Fecha de fallecimiento:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="311.0" text="Fecha de inicio:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="346.0" text="Fecha de fin:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="241.0" text="Ciudad de origen:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="206.0" text="País de origen:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="171.0" text="Segundo apellido:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="73.0" layoutY="137.0" text="Primer apellido:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="114.0" layoutY="101.0" text="Nombre:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="123.0" layoutY="66.0" text="Cédula:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lNombre" layoutX="180.0" layoutY="98.0" prefHeight="24.0" prefWidth="157.0">
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label fx:id="lPrimerApellido" layoutX="180.0" layoutY="134.0" prefHeight="24.0" prefWidth="157.0">
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label fx:id="lSegundoApellido" layoutX="180.0" layoutY="168.0" prefHeight="24.0" prefWidth="157.0">
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label fx:id="lPaisOrigen" layoutX="180.0" layoutY="203.0" prefHeight="24.0" prefWidth="157.0">
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label fx:id="lCiudadOrigen" layoutX="180.0" layoutY="238.0" prefHeight="24.0" prefWidth="157.0">
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label fx:id="lFechaFallecimiento" layoutX="180.0" layoutY="274.0" prefHeight="24.0" prefWidth="157.0">
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label fx:id="lFechaInicio" layoutX="180.0" layoutY="308.0" prefHeight="24.0" prefWidth="157.0">
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label fx:id="lFechaFin" layoutX="180.0" layoutY="343.0" prefHeight="24.0" prefWidth="157.0">
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

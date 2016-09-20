@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InterfazUsuario.AdquirirPinturas">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fefefe" height="462.0" stroke="#fefefe" strokeType="INSIDE" width="757.0" />
+      <ImageView fitHeight="240.0" fitWidth="462.0" layoutX="310.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagenes/consulta.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnAdquirir" layoutX="670.0" layoutY="411.0" mnemonicParsing="false" onAction="#adquirir" opacity="0.85" prefHeight="32.0" prefWidth="73.0" text="Adquirir">
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="14.0" layoutY="65.0" text="En exposición:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="iExposicion" layoutX="115.0" layoutY="65.0" mnemonicParsing="false" onAction="#cambiarTextoCheckBox" prefHeight="18.0" prefWidth="52.0" text="No">
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+      </CheckBox>
+      <Button fx:id="btnBuscar" layoutX="506.0" layoutY="61.0" mnemonicParsing="false" onAction="#buscar" prefHeight="27.0" prefWidth="61.0" text="Buscar">
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+      </Button>
+      <TextField fx:id="iBuscarNombre" layoutX="336.0" layoutY="62.0" prefHeight="25.0" prefWidth="163.0" promptText="Nombre" />
+      <Line endX="307.0" layoutX="436.0" layoutY="52.0" startX="-100.0" stroke="#5b0808" />
+      <TableView fx:id="tablaPinturas" layoutX="335.0" layoutY="95.0" opacity="0.75" prefHeight="305.0" prefWidth="409.0">
+         <columns>
+            <TableColumn fx:id="cCodigo2" prefWidth="31.0" text="No." />
+            <TableColumn fx:id="cNombre2" prefWidth="145.0" text="Nombre" />
+            <TableColumn fx:id="cTecnica" prefWidth="232.0" text="Técnica" />
+         </columns>
+      </TableView>
+      <Label layoutX="335.0" layoutY="14.0" prefHeight="38.0" prefWidth="191.0" text="Lista de pinturas">
+         <font>
+            <Font name="Eras Medium ITC" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tablaAdquisicionPinturas" layoutX="14.0" layoutY="95.0" opacity="0.75" prefHeight="305.0" prefWidth="281.0">
+         <columns>
+            <TableColumn fx:id="cCodigo" prefWidth="30.0" text="No." />
+            <TableColumn fx:id="cNombre" prefWidth="178.0" text="Nombre" />
+            <TableColumn fx:id="cExposicion" prefWidth="72.0" text="Exposición" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnQuitar" layoutX="222.0" layoutY="411.0" mnemonicParsing="false" onAction="#quitar" opacity="0.85" prefHeight="32.0" prefWidth="73.0" text="Quitar">
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="13.0" layoutY="14.0" prefHeight="38.0" prefWidth="219.0" text="Pinturas adquiridas">
+         <font>
+            <Font name="Eras Medium ITC" size="25.0" />
+         </font>
+      </Label>
+      <Line endX="180.0" layoutX="114.0" layoutY="52.0" startX="-100.0" stroke="#5b0808" />
+      <Button fx:id="btnListar" layoutX="243.0" layoutY="19.0" mnemonicParsing="false" onAction="#listar" prefHeight="28.0" prefWidth="52.0" text="Listar">
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnGuardar" layoutX="222.0" layoutY="61.0" mnemonicParsing="false" onAction="#guardar" prefHeight="27.0" prefWidth="73.0" text="Guardar">
+         <font>
+            <Font name="Eras Demi ITC" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="iFecha2" disable="true" editable="false" layoutX="373.0" layoutY="415.0" opacity="0.0" prefHeight="25.0" prefWidth="38.0" />
+      <TextField fx:id="iFecha1" disable="true" editable="false" layoutX="335.0" layoutY="415.0" opacity="0.0" prefHeight="25.0" prefWidth="38.0" />
+   </children>
+</AnchorPane>

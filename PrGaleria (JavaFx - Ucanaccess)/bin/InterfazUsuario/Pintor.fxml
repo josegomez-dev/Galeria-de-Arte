@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InterfazUsuario.Pintor">
+   <children>
+      <TableView fx:id="tablaPintor" layoutX="485.0" layoutY="235.0" prefHeight="244.0" prefWidth="401.0">
+         <columns>
+            <TableColumn fx:id="cCedula" prefWidth="75.0" text="Cédula" />
+            <TableColumn fx:id="cNombre" prefWidth="325.0" text="Nombre completo" />
+         </columns>
+      </TableView>
+      <Label layoutX="114.0" layoutY="218.0" text="Cédula:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="148.0" fitWidth="900.0" layoutX="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@Imagenes/encabezado.jpg" />
+         </image>
+         <effect>
+            <Reflection fraction="0.67" topOpacity="0.53" />
+         </effect>
+      </ImageView>
+      <Label layoutX="14.0" layoutY="169.0" text="Información del pintor" textFill="#d04848" textOverrun="CLIP">
+         <font>
+            <Font name="Eras Light ITC" size="23.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Line endX="300.0" layoutX="115.0" layoutY="199.0" startX="-100.0" stroke="#5b0808" />
+      <Button fx:id="btnAgregar" layoutX="381.0" layoutY="166.0" mnemonicParsing="false" onAction="#agregar" prefHeight="24.0" prefWidth="21.0">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Iconos/agregar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnGuardar" layoutX="310.0" layoutY="611.0" mnemonicParsing="false" onAction="#guardar" prefHeight="32.0" prefWidth="106.0" text="Guardar">
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Iconos/guardar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnListar" layoutX="804.0" layoutY="165.0" mnemonicParsing="false" onAction="#listar" prefHeight="19.0" prefWidth="82.0" text="Listar">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Iconos/listar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="55.0" layoutY="17.0" prefHeight="99.0" prefWidth="409.0" text="Gestión de Pintores" textFill="#932121">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Residuální" size="53.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAtras" layoutX="16.0" layoutY="17.0" mnemonicParsing="false" onAction="#atras" prefHeight="24.0" prefWidth="21.0">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Iconos/atrás.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label disable="true" layoutX="284.0" layoutY="251.0" textFill="CRIMSON">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="105.0" layoutY="253.0" text="Nombre:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lNombre" disable="true" layoutX="308.0" layoutY="250.0" prefHeight="21.0" prefWidth="106.0" textFill="CRIMSON">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lCedula" disable="true" layoutX="308.0" layoutY="216.0" prefHeight="21.0" prefWidth="106.0" textFill="CRIMSON">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lMensaje" disable="true" layoutX="14.0" layoutY="613.0" prefHeight="28.0" prefWidth="293.0" textFill="CRIMSON">
+         <font>
+            <Font name="Eras Demi ITC" size="16.0" />
+         </font>
+      </Label>
+      <Line endX="300.0" layoutX="585.0" layoutY="199.0" startX="-100.0" stroke="#5b0808" />
+      <Label layoutX="484.0" layoutY="169.0" text="Lista de pintores" textFill="#d04848" textOverrun="CLIP">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Light ITC" size="23.0" />
+         </font>
+      </Label>
+      <TextField fx:id="iNombre" layoutX="171.0" layoutY="250.0" prefHeight="25.0" prefWidth="127.0" />
+      <TextField fx:id="iPrimerApellido" layoutX="171.0" layoutY="285.0" prefHeight="25.0" prefWidth="127.0" />
+      <Label layoutX="64.0" layoutY="289.0" text="Primer apellido:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="323.0" text="Segundo apellido:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="iSegundoApellido" layoutX="171.0" layoutY="319.0" prefHeight="25.0" prefWidth="127.0" />
+      <Label fx:id="lPrimerApellido" disable="true" layoutX="308.0" layoutY="287.0" prefHeight="21.0" prefWidth="106.0" textFill="CRIMSON">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lSegundoApellido" disable="true" layoutX="308.0" layoutY="321.0" prefHeight="21.0" prefWidth="106.0" textFill="CRIMSON">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="iSeudonimo" layoutX="171.0" layoutY="354.0" prefHeight="25.0" prefWidth="127.0" />
+      <Label layoutX="86.0" layoutY="358.0" text="Seudónimo:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="393.0" text="Nacionalidad:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="iNacionalidad" layoutX="171.0" layoutY="389.0" prefHeight="25.0" prefWidth="127.0" />
+      <TextField fx:id="iFechaFallecimiento" layoutX="171.0" layoutY="529.0" prefHeight="25.0" prefWidth="127.0" />
+      <Label layoutX="16.0" layoutY="533.0" text="Fecha de fallecimiento:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="498.0" text="Fecha de nacimiento:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="iFechaNacimiento" layoutX="171.0" layoutY="494.0" prefHeight="25.0" prefWidth="127.0" />
+      <TextField fx:id="iCiudadOrigen" layoutX="171.0" layoutY="459.0" prefHeight="25.0" prefWidth="127.0" />
+      <Label layoutX="49.0" layoutY="463.0" text="Ciudad de origen:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="429.0" text="País de origen:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="iPaisOrigen" layoutX="171.0" layoutY="425.0" prefHeight="25.0" prefWidth="127.0" />
+      <Label layoutX="128.0" layoutY="568.0" text="Tipo:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lSeudonimo" disable="true" layoutX="308.0" layoutY="356.0" prefHeight="21.0" prefWidth="106.0" textFill="CRIMSON">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lNacionalidad" disable="true" layoutX="308.0" layoutY="391.0" prefHeight="21.0" prefWidth="106.0" textFill="CRIMSON">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lPaisOrigen" disable="true" layoutX="308.0" layoutY="427.0" prefHeight="21.0" prefWidth="106.0" textFill="CRIMSON">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lCiudadOrigen" disable="true" layoutX="308.0" layoutY="461.0" prefHeight="21.0" prefWidth="106.0" textFill="CRIMSON">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lFechaNacimiento" disable="true" layoutX="308.0" layoutY="496.0" prefHeight="21.0" prefWidth="106.0" textFill="CRIMSON">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lFechaFallecimiento" disable="true" layoutX="308.0" layoutY="531.0" prefHeight="21.0" prefWidth="106.0" textFill="CRIMSON">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lTipo" disable="true" layoutX="308.0" layoutY="566.0" prefHeight="21.0" prefWidth="106.0" textFill="CRIMSON">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnEliminar" disable="true" layoutX="780.0" layoutY="611.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="32.0" prefWidth="106.0" text="Eliminar">
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Iconos/borrar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnConsultar" disable="true" layoutX="667.0" layoutY="611.0" mnemonicParsing="false" onAction="#consultar" prefHeight="32.0" prefWidth="106.0" text="Consultar">
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Iconos/consultar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnBuscar" layoutX="710.0" layoutY="203.0" mnemonicParsing="false" onAction="#buscar" prefHeight="27.0" prefWidth="61.0" text="Buscar">
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="iTipo" layoutX="171.0" layoutY="564.0" prefHeight="25.0" prefWidth="127.0" promptText="-- Seleccione" />
+      <Label layoutX="485.0" layoutY="498.0" text="Escuela:">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="Eras Medium ITC" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="iEscuela" layoutX="545.0" layoutY="494.0" prefHeight="25.0" prefWidth="340.0" promptText="-- Seleccione" visibleRowCount="3" />
+      <Button fx:id="btnElegirMaestros" disable="true" layoutX="485.0" layoutY="611.0" mnemonicParsing="false" onAction="#elegirMaestros" prefHeight="32.0" prefWidth="175.0" text="Elegir maestros">
+         <font>
+            <Font name="Eras Demi ITC" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Iconos/maestros.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="lEscuela" disable="true" layoutX="780.0" layoutY="566.0" prefHeight="21.0" prefWidth="106.0" textFill="CRIMSON">
+         <font>
+            <Font name="Gill Sans MT Condensed" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="iCedula" layoutX="171.0" layoutY="215.0" prefHeight="25.0" prefWidth="127.0" />
+      <TextField fx:id="iBuscar" layoutX="485.0" layoutY="204.0" prefHeight="25.0" prefWidth="219.0" promptText="Nombre" />
+   </children>
+</AnchorPane>
